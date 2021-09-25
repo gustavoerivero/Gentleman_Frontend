@@ -12,7 +12,7 @@ const Theme = createTheme({
                             },
                             "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
                                 borderRadius: 10,
-                                backgroundColor: pink[500],
+                                backgroundColor: purple[500],
                                 minHeight: 5,
                                 border: '.5px solid #E91E63',
                             },
@@ -34,9 +34,9 @@ const Theme = createTheme({
     },
     palette: {
         primary: {
-            light: pink[400],
-            main: pink[500],
-            dark: pink[800]
+            light: purple[300],
+            main: purple[500],
+            dark: purple[800]
         },
         secondary: {
             light: purple[300],
@@ -45,8 +45,8 @@ const Theme = createTheme({
         },
         text: {
             primary: '#FFFFFF',
-            secondary: pink[500],
-            disabled: pink[50],
+            secondary: purple['A400'],
+            disabled: purple[50],
             hint: 'rgba(0, 0, 0, 0.38)',
         },
         background: {
