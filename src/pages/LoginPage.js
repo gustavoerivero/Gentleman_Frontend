@@ -1,22 +1,28 @@
 import React from 'react';
-import {
-  CssBaseline,
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { CssBaseline, Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Login from '../components/Login';
 import '@fontsource/roboto';
 
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    minHeight: '100vh',
+  }
+}))
+
 export default function LoginPage() {
+
+  const classes = useStyles();
+
   return (
-    <div>
-      <CssBaseline />
-      <Grid container justifyContent='center'>
-        <Grid item xs={12}>
-          <Typography variant='h2' component='h1' color='secondary' align='center'>
-            Gentleman Programming 2021
-          </Typography>
-        </Grid>
+    <Grid container justifyContent='center' alignItems='center' className={classes.root}>
+      <Grid item>
+        <CssBaseline />
       </Grid>
-    </div>
+      <Grid item xs={12} align='center'>
+        <Login />
+      </Grid>
+    </Grid>
   )
 }
