@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CssBaseline, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Appbar from '../components/AppBar';
@@ -17,30 +17,28 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LoginPage() {
 
-  const classes = useStyles();
+  const [state, setState] = useState([]);
+  const [page, setPage] = useState(1);
 
-  const example = [
-    {
-      title: 'Empresa 1',
-      desc: 'Primera empresa',
-    },
-    {
-      title: 'Empresa 2',
-      desc: 'Segunda empresa',
-    },
-    {
-      title: 'Empresa 3',
-      desc: 'Tercera empresa',
-    },
-    {
-      title: 'Empresa 4',
-      desc: 'Cuarta empresa',
-    },
-    {
-      title: 'Empresa 5',
-      desc: 'Quinta empresa',
-    },
-  ]
+  useEffect(() => {
+    fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=5`)
+      .then(res => res.json())
+      .then(json => setState([...state, ...json.data]));
+    console.log(page);
+  }, [page]);
+
+  const scrollToEnd = () => {
+    setPage(page + 1);
+  }
+
+  window.onscroll = function () { 
+    if (window.innerHeight + document.documentElement.scrollTop - 8
+      === document.documentElement.offsetHeight) {
+      scrollToEnd();
+    }
+  }
+
+  const classes = useStyles();
 
   return (
     <Grid container spacing={2} justifyContent='center' alignItems='center' className={classes.root}>
@@ -48,14 +46,16 @@ export default function LoginPage() {
         <CssBaseline />
       </Grid>
       <Grid item xs={12} align='center' className={classes.container}>
-        <Appbar title='Mis bootcamps'/>
+        <Appbar title='Mis bootcamps' />
       </Grid>
       {
-        example.map((element, i) => (
-          <Grid item xs={12} key={i} align='center'>
-            <BootcampCard title={element.title} content={element.desc} />
-          </Grid>
-        ))
+        state.length > 0 && state.map((el, i) => {
+          return(
+            <Grid item xs={12} key={i} align='center'>
+              <BootcampCard title={el.name} content={el.trips} />
+            </Grid>
+          )
+        })
       }
     </Grid>
   )

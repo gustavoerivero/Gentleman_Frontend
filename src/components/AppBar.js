@@ -9,6 +9,7 @@ import {
   Button,
   Drawer,
   AppBar,
+  Grid,
   Divider,
   IconButton,
   MenuList,
@@ -22,7 +23,6 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import GroupIcon from '@material-ui/icons/Group';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
+  button: {
+    float: 'right',
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -67,9 +70,6 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
   },
-  title: {
-    flexGrow: 1,
-  },
   copyright: {
     paddingTop: '60vh',
     paddingRight: 5,
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Appbar({ title, subtitle }) {
+export default function Appbar({ title, buttonText, handleClick }) {
 
   const classes = useStyles();
   const theme = useTheme();
@@ -102,21 +102,29 @@ export default function Appbar({ title, subtitle }) {
         color='default'
       >
         <Toolbar variant='dense'>
-          <IconButton
-            color='primary'
-            aria-label='open drawer'
-            onClick={handleDrawerOpen}
-            edge='start'
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant='h6' color='primary' className={classes.title}>
-            <b>{ title }</b>
-          </Typography>
-          <Button size='small' color='primary' variant='contained'>
-            Agregar bootcamp
-          </Button>
+          <Grid container alignItems='center'>
+            <Grid item xs={1} align='left'>
+              <IconButton
+                color='primary'
+                aria-label='open drawer'
+                onClick={handleDrawerOpen}
+                edge='start'
+                className={clsx(classes.menuButton, open && classes.hide)}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Grid>
+            <Grid item xs={6} md={8} align='left'>
+              <Typography variant='h6' color='primary'>
+                <b>{title}</b>
+              </Typography>
+            </Grid>
+            <Grid item xs={5} md={3} align='right'>
+              <Button size='small' color='primary' variant='contained' className={classes.button}>
+                Agregar bootcamp
+              </Button>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -135,12 +143,6 @@ export default function Appbar({ title, subtitle }) {
         </div>
         <Divider />
         <MenuList>
-          <MenuItem>
-            <ListItemIcon>
-              <GroupIcon color='primary' />
-            </ListItemIcon>
-            <ListItemText secondary='Lista de usuarios' />
-          </MenuItem>
           <MenuItem>
             <ListItemIcon>
               <AccountBoxIcon color='primary' />
