@@ -121,7 +121,7 @@ export default function Appbar({ title, buttonText, handleClick }) {
             </Grid>
             <Grid item xs={5} md={3} align='right'>
               <Button size='small' color='primary' variant='contained' className={classes.button}>
-                Agregar bootcamp
+                Add bootcamp
               </Button>
             </Grid>
           </Grid>
@@ -147,13 +147,13 @@ export default function Appbar({ title, buttonText, handleClick }) {
             <ListItemIcon>
               <AccountBoxIcon color='primary' />
             </ListItemIcon>
-            <ListItemText secondary='Mi perfil' />
+            <ListItemText secondary='My profile' />
           </MenuItem>
           <MenuItem>
             <ListItemIcon>
               <ExitToAppIcon color='primary' />
             </ListItemIcon>
-            <ListItemText secondary='Cerrar sesión' />
+            <ListItemText secondary='Log out' />
           </MenuItem>
         </MenuList>
         <Divider />

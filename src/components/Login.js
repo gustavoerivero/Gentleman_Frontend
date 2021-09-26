@@ -32,7 +32,7 @@ const Login = () => {
             <Grid item xs={12} align='center'>
               <TextField
                 variant='filled'
-                label='Usuario'
+                label='User'
                 fullWidth
                 required
               />
@@ -40,24 +40,24 @@ const Login = () => {
             <Grid item xs={12} align='center'>
               <TextField
                 variant='filled'
-                label='Contraseña'
+                label='Password'
                 fullWidth
                 required
               />
             </Grid>
             <Grid item xs={6} align='left' size='small'>
               <Button variant='text' color='primary' size='small'>
-                Registrar usuario
+                Sign Up as User
               </Button>
             </Grid>
             <Grid item xs={6} align='right'>
               <Button variant='text' color='primary' size='small'>
-                Registrar empresa
+                Sign Up as Company
               </Button>
             </Grid>
             <Grid item xs={12} align='right'>
               <Button variant='contained' color='primary'>
-                Entrar
+                Login
               </Button>
             </Grid>
           </Grid>

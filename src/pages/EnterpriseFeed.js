@@ -46,7 +46,7 @@ export default function LoginPage() {
         <CssBaseline />
       </Grid>
       <Grid item xs={12} align='center' className={classes.container}>
-        <Appbar title='Mis bootcamps' />
+        <Appbar title='My bootcamps' />
       </Grid>
       {
         state.length > 0 && state.map((el, i) => {

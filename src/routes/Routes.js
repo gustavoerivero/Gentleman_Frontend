@@ -4,7 +4,9 @@ import CustomSwitch from './CustomSwitch';
 import LoginPage from '../pages/LoginPage';
 import EnterpriseFeed from '../pages/EnterpriseFeed';
 import Theme from '../static/theme/Theme';
+import RegisterPage from '../pages/RegisterPage';
 import { ThemeProvider } from '@material-ui/core';
+
 
 export default function Routes() {
   return (
@@ -12,6 +14,7 @@ export default function Routes() {
       <BrowserRouter>
         <CustomSwitch>
           <Route exact path='/' component={LoginPage} />
+          <Route exact path='/register-page' component={ RegisterPage } />
           <Route exact path='/enterprise/feed' component={EnterpriseFeed} />
         </CustomSwitch>
       </BrowserRouter>
