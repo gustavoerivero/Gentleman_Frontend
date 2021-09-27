@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Card,
@@ -8,6 +8,7 @@ import {
   Typography
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import BootcampDialog from './BootcampDialog';
 
 const useStyles = makeStyles({
   root: {
@@ -17,8 +18,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BootCampCard({ title, content }) {
+export default function BootCampCard({ key, title, content }) {
   const classes = useStyles();
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  }
 
   return (
     <Card className={classes.root} variant="outlined">
@@ -35,9 +42,16 @@ export default function BootCampCard({ title, content }) {
         </Grid>
         <Grid item xs={2} md={1} align='right'>
           <CardActions>
-            <Button size="small" variant='text' color='primary'>
+            <Button size="small" variant='text' color='primary' onClick={handleOpen}>
               See
             </Button>
+            <BootcampDialog 
+              key={key}
+              title={title}
+              content={content}
+              open={open}
+              handleOpen={handleOpen}
+            />
           </CardActions>
         </Grid>
       </Grid>
