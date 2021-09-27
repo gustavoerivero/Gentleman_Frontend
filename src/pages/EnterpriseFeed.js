@@ -54,7 +54,7 @@ export default function LoginPage() {
         state.length > 0 && state.map((el, i) => {
           return(
             <Grid item xs={12} key={i} align='center'>
-              <BootcampCard id={i} title={el.name} content={el._id} userType={2} />
+              <BootcampCard id={i} title={el.name} content={el._id} userType={1} />
             </Grid>
           )
         })

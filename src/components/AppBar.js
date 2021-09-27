@@ -123,7 +123,7 @@ export default function Appbar({ userType, title, buttonText, handleClick }) {
               </Typography>
             </Grid>
             <Grid item xs={5} md={3} align='right'>
-              {userType === 2 ? 
+              {userType === 1 ? 
                 <Button 
                   size='small' 
                   color='primary' 
