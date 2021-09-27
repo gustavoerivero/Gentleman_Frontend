@@ -14,7 +14,7 @@ export default function Routes() {
       <BrowserRouter>
         <CustomSwitch>
           <Route exact path='/' component={LoginPage} />
-          <Route exact path='/register-page/:value' component={ RegisterPage } />
+          <Route exact path='/register-page/:value' component={RegisterPage} />
           <Route exact path='/enterprise/feed' component={EnterpriseFeed} />
         </CustomSwitch>
       </BrowserRouter>
