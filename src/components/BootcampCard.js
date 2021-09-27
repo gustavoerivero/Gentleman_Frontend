@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BootCampCard({ key, title, content }) {
+export default function BootCampCard({ userType, enterpriseId, id, title, content }) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
@@ -42,15 +42,17 @@ export default function BootCampCard({ key, title, content }) {
         </Grid>
         <Grid item xs={2} md={1} align='right'>
           <CardActions>
-            <Button size="small" variant='text' color='primary' onClick={handleOpen}>
-              View
+            <Button size='small' variant='text' color='primary' onClick={handleOpen}>
+              See
             </Button>
             <BootcampDialog 
-              key={key}
+              id={id}
+              enterpriseId={enterpriseId}
               title={title}
               content={content}
               open={open}
               handleOpen={handleOpen}
+              userType={userType}
             />
           </CardActions>
         </Grid>

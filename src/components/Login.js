@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import {
   Button,
   Grid,
@@ -10,6 +9,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import Loading from './Loading';
 import { Link } from "react-router-dom";
+import { getAllUsers } from '../api/modules'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,14 +25,14 @@ const Login = () => {
 
   useEffect(() => {
     if(message.length === 0)
-      axios.get(`https://gentleman-api.herokuapp.com/user/all`)
+      getAllUsers()
         .then((response) => {
           setMessage(response.data.Data);
-          console.log(message)
+          console.log(response)
         })
         .catch((error) => console.log('Error: ', error));
   }, [message]);
-
+  console.log(message)
   return (
     <div>
       <form>
