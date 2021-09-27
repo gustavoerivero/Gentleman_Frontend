@@ -26,21 +26,15 @@ const Profile = () => {
  <div>
       <form alignItems="center">
         <Paper className={classes.root}>
-          <Grid container spacing={2} justifyContent="center">
+          <Grid container spacing={2} justifyContent="right">
             <Grid item xs={12} align="center">
               <Typography variant="h5" component="h2" color="primary">
-              <Avatar className={classes.large} className={classes.Purple} >
-                        US
-                </Avatar>   
+              <Avatar style={{ height: '100px', width: '100px' }}></Avatar>
               </Typography>
             </Grid>
 
 
-
-            <Grid item xs={12}>
-
-
-            <TextField
+            <TextField style ={{width: '50%'}}
                 label="User"
                 variant="filled"
                 placeholder="Enter a user"
@@ -49,7 +43,7 @@ const Profile = () => {
             />
 
             
-            <TextField
+            <TextField style ={{width: '50%'}}
                 label="Full Name"
                 variant="filled"
                 placeholder="Enter your full name"
@@ -58,7 +52,7 @@ const Profile = () => {
             />
 
 
-            <TextField
+            <TextField style ={{width: '50%'}}
                 label="Password"
                 variant="filled"
                 placeholder="Enter a valid password"
@@ -67,7 +61,7 @@ const Profile = () => {
               />
 
 
-            <TextField
+            <TextField style ={{width: '50%'}}
                 label="Confirm Password"
                 required
                 variant="filled"
@@ -77,7 +71,7 @@ const Profile = () => {
 
  
 
-              <TextField
+              <TextField style ={{width: '50%'}}
                 label="Email"
                 variant="filled"
                 placeholder="Enter a valid email"
@@ -85,21 +79,21 @@ const Profile = () => {
                 className={classes.rightField}
               />
 
-              <TextField
+              <TextField style ={{width: '50%'}}
                 label="Social Network"
                 variant="filled"
                 placeholder="Enter your LinkedIn profile (if you have)"
                 className={classes.rightField}
               />
 
-              <TextField
+              <TextField style ={{width: '50%'}}
                 label="Repository"
                 variant="filled"
                 placeholder="Enter your Github profile (if you have)"
                 className={classes.leftField}
               />
 
-              <TextField
+              <TextField style ={{width: '50%'}}
                 label="Country"
                 variant="filled"
                 placeholder="Enter the country where you live"
@@ -118,15 +112,13 @@ const Profile = () => {
                 fullWidth
                 className={classes.complete}
               />
-            </Grid>
-
+        
 
             <Grid item xs={12} align="center">
               <Button variant="contained" color="primary">
                 Edit User
               </Button>
             </Grid>
-
           </Grid>
         </Paper>
       </form>
