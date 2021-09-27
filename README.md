@@ -20,6 +20,7 @@ Or, failing that
 
 * For the project [Visual Studio Code](https://code.visualstudio.com/) was used as text editor for the frontend, but [Visual Studio Code](https://code.visualstudio.com/) can be used for the frontend. 
 frontend development, but another text editor can be used.
+
 ### Installation 🔧
 
 _To begin, we proceed with the download of the repository.To do this, open the console, go to the folder in which you want to save the project and execute the following command:_
