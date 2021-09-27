@@ -40,6 +40,14 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "0%",
       },
     },
+
+    centerField: {
+        marginLeft: "5%",
+    },
+    complete: {
+        marginTop: '1em',
+      },
+
   }));
   
 const Profile = () => {
@@ -128,7 +136,7 @@ const Profile = () => {
               />
 
             
-              <TextField
+              <TextField 
                 label="Enter a brief description"
                 variant="filled"
                 multiline
