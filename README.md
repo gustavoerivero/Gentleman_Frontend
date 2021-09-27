@@ -1,86 +1,92 @@
 # Hackathon Gentleman Programming 2021
 
-_Este proyecto representa el reto propuesto por el Hackathon Gentleman Programming 2021, en el que se realizará un sistema realizado a base de JavaScript y librerías derivadas del mismo lenguaje. Un proyecto relacionado a bootcamps, 
-en donde, tanto usuarios como empresas puegan iniciar sesión / registrarse, las empresas añadir bootcamps y los usuarios inscribirse en los mismos._
+<table>
+    <tr>
+        <!-- Do not translate this table -->
+        <td><a href="./README.md"> English </a></td>
+        <td><a href="./README.ES.md"> Spanish </a></td>
+    </tr>
+</table>
 
-### Pre-requisitos 📋
+_This project represents the challenge proposed by the Hackathon Gentleman Programming 2021, in which a system based on JavaScript and libraries derived from the same language will be created. A project related to bootcamps, where both users and companies can log in / sign up, companies can add bootcamps and users can sign up for them._
 
-* Última versión estable de [Node.js](https://nodejs.org/en/)
+### Pre-requisites 📋
 
-_O, en su defecto_
+* Latest stable version of [Node.js](https://nodejs.org/en/)
 
-* Última versión estable de [Yarn](https://yarnpkg.com/)
+Or, failing that
 
-* Para el proyecto se usó [Visual Studio Code](https://code.visualstudio.com/) como editor de texto para la 
-elaboración del frontend, pero se puede utilizar otro editor de texto.
+* Latest stable version of [Yarn](https://yarnpkg.com/)
 
-### Instalación 🔧
+* For the project [Visual Studio Code](https://code.visualstudio.com/) was used as text editor for the frontend, but [Visual Studio Code](https://code.visualstudio.com/) can be used for the frontend. 
+frontend development, but another text editor can be used.
+### Installation 🔧
 
-_Para comenzar, se procede con la descarga del repositorio. Para ello se debe abrir la consola,
-ubicarse en la carpera en la que desea guardar el proyecto y ejecutar el siguiente comando:_
+_To begin, we proceed with the download of the repository.To do this, open the console, go to the folder in which you want to save the project and execute the following command:_
 
 ```
 git clone https://github.com/gustavoerivero/Gentleman_Frontend.git
 ```
 
-_Luego, situarse en la carpeta clonada del repositorio "Gentleman_Frontend"._
+_Then go to the cloned folder in the "Gentleman_Frontend" repository._
 
-_Para el caso de un Sistema Operativo Windows, con el comando:__
+_For a Windows Operating System, with the command:__
 
 ```
 cd Gentleman_Frontend
 ```
 
-Luego, se instalan las dependencias del frontend. Cabe destacar que hay diferentes maneras de realizar esto._
+Then, the frontend dependencies are installed. It should be noted that there are different ways to do this._
 
-_Con npm:_
+_With npm:_
 
 ```
 npm install
 ```
 
-_De no funcionar, intentar con:_
+_If it doesn't work, try with:_
 
 ```
 npm i -f
 ```
 
-_De utilizar yarn:_
+_If using yarn:_
 
 ```
 yarn upgrade
 ```
 
-_Una vez se logre la instalación de las dependencias, el frontend está listo para desplegarse._
+_Once the installation of the dependencies is successful, the frontend is ready to deploy._
 
-## Despliegue 📦
+## Deployment 📦
 
-* _Para realizar un desplegue local (localhost:3000) del frontend, se procede a ejecutar uno de los siguientes comandos:_
+* _To deploy the frontend locally (localhost:3000), we proceed by executing one of the following commands:_
 
-_Con npm:_
+_With npm:_
 
 ```
 npm start
 ```
 
-_Con yarn:_
+_With yarn:_
 ```
 yarn start
 ```
 
-## Construido con 🛠️
+## Built with 🛠️
 
-_Es bueno recalcar que el proyecto fue desarrollado con:_
+_It's good to emphasize that the project was developed with:_
 
-* [React.js](https://es.reactjs.org/) - El framework web usado.
-* [React Router](https://reactrouter.com/) - Librería de React.js para la navegación entre páginas.
-* [Material UI](https://material-ui.com/) - Librería de React.js para diseño de componentes visuales.
-* [React VFX](https://amagi.dev/react-vfx/) - Librería de React.js para añadir efectos VFX a imágenes, vídeos y/o textos.
-* [React Top Bar Progress Indicator](https://www.npmjs.com/package/react-topbar-progress-indicator) - Librería de React.js para añadir una barra superior que indica la carga de la página.
-* [React Router DOM](https://www.npmjs.com/package/react-router-dom) - Librería de React.js que facilita el redireccionamiento entre páginas.
-## Autores ✒️
+* [React.js](https://es.reactjs.org/) - The web framework used.
+* [React Router](https://reactrouter.com/) - React.js library for navigation between pages.
+* Material UI](https://material-ui.com/) - React.js library for visual component design.
+* [React VFX](https://amagi.dev/react-vfx/) - React.js library for adding VFX effects to images, videos and/or text.
+* [React Top Bar Progress Indicator](https://www.npmjs.com/package/react-topbar-progress-indicator) - React.js library for adding a top bar to indicate page loading.
+* [React Router DOM](https://www.npmjs.com/package/react-router-dom) - React.js library that facilitates redirection between pages.
 
-_Los autores de este proyecto son:_
+## Authors ✒️
+
+_The authors of this project are:_
 
 * **Gustavo Rivero** - [gustavoerivero](https://github.com/gustavoerivero)
 * **Dany Karam**  - [Ryuuji14](https://github.com/Ryuuji14)
@@ -92,4 +98,4 @@ _Los autores de este proyecto son:_
 
 
 ---
-⌨️ con ❤️ por [Flamethyst Programming] 
+⌨️ with ❤️ by [Flamethyst Programming] 
