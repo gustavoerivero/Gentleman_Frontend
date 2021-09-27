@@ -31,9 +31,11 @@ export default function LoginPage() {
     setPage(page + 1);
   }
 
-  window.onscroll = function () { 
-    if (window.innerHeight + document.documentElement.scrollTop - 8
-      === document.documentElement.offsetHeight) {
+  window.onscroll = function () {
+    const offsetHeight = document.documentElement.offsetHeight;
+    const sum = window.innerHeight + document.documentElement.scrollTop;
+    console.log('Is equal: ', offsetHeight === sum);
+    if (sum === offsetHeight) {
       scrollToEnd();
     }
   }
@@ -46,13 +48,13 @@ export default function LoginPage() {
         <CssBaseline />
       </Grid>
       <Grid item xs={12} align='center' className={classes.container}>
-        <Appbar title='My bootcamps' />
+        <Appbar userType={0} title='My bootcamps' />
       </Grid>
       {
         state.length > 0 && state.map((el, i) => {
           return(
             <Grid item xs={12} key={i} align='center'>
-              <BootcampCard key={i} title={el.name} content={el.trips} />
+              <BootcampCard id={i} title={el.name} content={el._id} userType={0} />
             </Grid>
           )
         })
