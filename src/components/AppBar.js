@@ -171,7 +171,7 @@ export default function Appbar({ userType, title, buttonText, handleClick }) {
             <ListItemIcon>
               <ExitToAppIcon color='primary' />
             </ListItemIcon>
-            <ListItemText secondary='Logout' />
+            <ListItemText secondary='Log out' />
           </MenuItem>
         </MenuList>
         <Divider />
