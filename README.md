@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Hackathon Gentleman Programming 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Este proyecto representa el reto propuesto por el Hackathon Gentleman Programming 2021, en el que se realizará un sistema realizado a base de JavaScript y librerías derivadas del mismo lenguaje. Un proyecto relacionado a bootcamps, 
+en donde, tanto usuarios como empresas puegan iniciar sesión / registrarse, las empresas añadir bootcamps y los usuarios inscribirse en los mismos._
 
-## Available Scripts
+### Pre-requisitos 📋
 
-In the project directory, you can run:
+* Última versión estable de [Node.js](https://nodejs.org/en/)
 
-### `yarn start`
+_O, en su defecto_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Última versión estable de [Yarn](https://yarnpkg.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Para el proyecto se usó [Visual Studio Code](https://code.visualstudio.com/) como editor de texto para la 
+elaboración del frontend, pero se puede utilizar otro editor de texto.
 
-### `yarn test`
+### Instalación 🔧
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Para comenzar, se procede con la descarga del repositorio. Para ello se debe abrir la consola,
+ubicarse en la carpera en la que desea guardar el proyecto y ejecutar el siguiente comando:_
 
-### `yarn build`
+```
+git clone https://github.com/gustavoerivero/Gentleman_Frontend.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Luego, situarse en la carpeta clonada del repositorio "Gentleman_Frontend"._
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Para el caso de un Sistema Operativo Windows, con el comando:__
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd Gentleman_Frontend
+```
 
-### `yarn eject`
+Luego, se instalan las dependencias del frontend. Cabe destacar que hay diferentes maneras de realizar esto._
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_Con npm:_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_De no funcionar, intentar con:_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm i -f
+```
 
-## Learn More
+_De utilizar yarn:_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+yarn upgrade
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Una vez se logre la instalación de las dependencias, el frontend está listo para desplegarse._
 
-### Code Splitting
+## Despliegue 📦
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* _Para realizar un desplegue local (localhost:3000) del frontend, se procede a ejecutar uno de los siguientes comandos:_
 
-### Analyzing the Bundle Size
+_Con npm:_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+npm start
+```
 
-### Making a Progressive Web App
+_Con yarn:_
+```
+yarn start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Construido con 🛠️
 
-### Advanced Configuration
+_Es bueno recalcar que el proyecto fue desarrollado con:_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* [React.js](https://es.reactjs.org/) - El framework web usado.
+* [React Router](https://reactrouter.com/) - Librería de React.js para la navegación entre páginas.
+* [Material UI](https://material-ui.com/) - Librería de React.js para diseño de componentes visuales.
+* [React VFX](https://amagi.dev/react-vfx/) - Librería de React.js para añadir efectos VFX a imágenes, vídeos y/o textos.
+* [React Top Bar Progress Indicator](https://www.npmjs.com/package/react-topbar-progress-indicator) - Librería de React.js para añadir una barra superior que indica la carga de la página.
+* [React Router DOM](https://www.npmjs.com/package/react-router-dom) - Librería de React.js que facilita el redireccionamiento entre páginas.
+## Autores ✒️
 
-### Deployment
+_Los autores de este proyecto son:_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* **Gustavo Rivero** - [gustavoerivero](https://github.com/gustavoerivero)
+* **Dany Karam**  - [Ryuuji14](https://github.com/Ryuuji14)
+* **Oswaldo Yanez**  - [WolvesDevelopers](https://github.com/WolvesDevelopers)
+* **Wilder Pérez**  - [Sr-Wild](https://github.com/Sr-Wild)
+* **Simón Velazquez**  - [nohearth](https://github.com/nohearth)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+---
+⌨️ con ❤️ por [Flamethyst Programming] 

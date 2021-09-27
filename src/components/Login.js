@@ -1,6 +1,14 @@
-import React from "react";
-import { Button, Grid, Paper, TextField, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import {
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Typography
+} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Loading from './Loading';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,51 +21,66 @@ const useStyles = makeStyles((theme) => ({
 const Login = () => {
   const classes = useStyles();
 
+  const [message, setMessage] = useState([]);
+
+  useEffect(() => {
+    if(message.length === 0)
+      axios.get(`https://gentleman-api.herokuapp.com/user/all`)
+        .then((response) => {
+          setMessage(response.data.Data);
+          console.log(message)
+        })
+        .catch((error) => console.log('Error: ', error));
+  }, [message]);
+
   return (
     <div>
-      <form alignItems="center">
+      <form>
         <Paper className={classes.root}>
           <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} align="center">
               <Typography variant="h5" component="h2" color="primary">
                 <b>Hackathon Gentleman Programming 2021</b>
               </Typography>
+              <Typography variant='body2' color='secondary'>
+                {message.length === 0 ? <Loading /> : 'connected'}
+              </Typography>
             </Grid>
-            <Grid item xs={12} align="center">
-              <TextField variant="filled" label="User" fullWidth required />
+            <Grid item xs={12} align='center'>
+              <TextField
+                variant='filled'
+                label='Username'
+                fullWidth
+                required
+              />
             </Grid>
-            <Grid item xs={12} align="center">
-              <TextField variant="filled" label="Password" fullWidth required />
+            <Grid item xs={12} align='center'>
+              <TextField
+                variant='filled'
+                label='Password'
+                fullWidth
+                required
+              />
             </Grid>
-            <Grid item xs={6} align="left" size="small">
-              <Button
-                variant="text"
-                color="primary"
-                size="small"
-                component={Link}
+            <Grid item xs={6} align='left' size='small'>
+              <Button variant='text' color='primary' size='small'       component={Link}
                 to={{
                   pathname: "/register-page/user",
-                }}
-              >
-                Sign Up as User
+                }}>
+                Sign up as user
               </Button>
             </Grid>
-            <Grid item xs={6} align="right">
-              <Button
-                variant="text"
-                color="primary"
-                size="small"
-                component={Link}
+            <Grid item xs={6} align='right'>
+              <Button variant='text' color='primary' size='small'  component={Link}
                 to={{
                   pathname: "/register-page/company",
-                }}
-              >
-                Sign Up as Company
+                }}>
+                Sign up as enterprise
               </Button>
             </Grid>
-            <Grid item xs={12} align="right">
-              <Button variant="contained" color="primary">
-                Login
+            <Grid item xs={12} align='right'>
+              <Button variant='contained' color='primary'>
+                Sign in
               </Button>
             </Grid>
           </Grid>
