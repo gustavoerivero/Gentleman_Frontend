@@ -31,15 +31,6 @@ _Para el caso de un Sistema Operativo Windows, con el comando:__
 cd Gentleman_Frontend
 ```
 
-* _Para preparar el entorno del frontend:_
-
-_Se procede con la instalación de las librerías y dependencias necesarias para su ejecución.
-Primeramente, se accede a la carpeta del frontend._
-
-```
-cd frontend_
-```
-
 Luego, se instalan las dependencias del frontend. Cabe destacar que hay diferentes maneras de realizar esto._
 
 _Con npm:_
@@ -92,8 +83,10 @@ _Es bueno recalcar que el proyecto fue desarrollado con:_
 _Los autores de este proyecto son:_
 
 * **Gustavo Rivero** - [gustavoerivero](https://github.com/gustavoerivero)
-* **María Paredes**  - [Mariaparedes](https://github.com/Mariaparedes)
+* **Dany Karam**  - [Ryuuji14](https://github.com/Ryuuji14)
 * **Oswaldo Yanez**  - [WolvesDevelopers](https://github.com/WolvesDevelopers)
+* **Wilder Pérez**  - [Sr-Wild](https://github.com/Sr-Wild)
+* **Simón Velazquez**  - [nohearth](https://github.com/nohearth)
 
 
 
