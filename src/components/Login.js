@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
   Button,
   Grid,
@@ -7,6 +8,7 @@ import {
   Typography
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Loading from './Loading';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,20 +21,35 @@ const Login = () => {
 
   const classes = useStyles();
 
+  const [message, setMessage] = useState([]);
+
+  useEffect(() => {
+    if(message.length === 0)
+      axios.get(`https://gentleman-api.herokuapp.com/user/all`)
+        .then((response) => {
+          setMessage(response.data.Data);
+          console.log(message)
+        })
+        .catch((error) => console.log('Error: ', error));
+  }, [message]);
+
   return (
     <div>
-      <form alignItems='center'>
+      <form>
         <Paper className={classes.root}>
           <Grid container spacing={2} justifyContent='center'>
             <Grid item xs={12} align='center'>
               <Typography variant='h5' component='h2' color='primary'>
                 <b>Hackathon Gentleman Programming 2021</b>
               </Typography>
+              <Typography variant='body2' color='secondary'>
+                {message.length === 0 ? <Loading /> : 'connected'}
+              </Typography>
             </Grid>
             <Grid item xs={12} align='center'>
               <TextField
                 variant='filled'
-                label='Usuario'
+                label='Username'
                 fullWidth
                 required
               />
@@ -40,24 +57,24 @@ const Login = () => {
             <Grid item xs={12} align='center'>
               <TextField
                 variant='filled'
-                label='Contraseña'
+                label='Password'
                 fullWidth
                 required
               />
             </Grid>
             <Grid item xs={6} align='left' size='small'>
               <Button variant='text' color='primary' size='small'>
-                Registrar usuario
+                Sign up as user
               </Button>
             </Grid>
             <Grid item xs={6} align='right'>
               <Button variant='text' color='primary' size='small'>
-                Registrar empresa
+                Sign up as enterprise
               </Button>
             </Grid>
             <Grid item xs={12} align='right'>
               <Button variant='contained' color='primary'>
-                Entrar
+                Sign in
               </Button>
             </Grid>
           </Grid>

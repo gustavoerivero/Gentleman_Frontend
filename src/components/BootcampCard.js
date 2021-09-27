@@ -36,7 +36,7 @@ export default function BootCampCard({ title, content }) {
         <Grid item xs={2} md={1} align='right'>
           <CardActions>
             <Button size="small" variant='text' color='primary'>
-              Ver
+              See
             </Button>
           </CardActions>
         </Grid>
