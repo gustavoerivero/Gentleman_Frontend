@@ -17,7 +17,7 @@ export default function Routes() {
         <CustomSwitch>
           <Route exact path='/' component={LoginPage} />
           <Route exact path='/register-page/:value' component={RegisterPage} />
-          <Route exact path='/enterprise/feed' component={EnterpriseFeed} />
+          <Route exact path='/:value/feed' component={EnterpriseFeed} />
           <Route exact path= '/profile' component={ProfilePage}/>
           <Route exact path='/error-404' component={NotFound} />
           <Redirect from='*' to='/error-404' />
