@@ -83,9 +83,9 @@ const Login = () => {
         })
     if (res.OK === 1) {
       if (user.idRole === 0)
-        window.location.href = 'http://localhost:3000/enterprise/feed'
+        window.location.href = '/enterprise/feed'
       if (user.idRole === 1)        
-        window.location.href = 'http://localhost:3000/user/feed'
+        window.location.href = '/user/feed'
     }
   })
 
