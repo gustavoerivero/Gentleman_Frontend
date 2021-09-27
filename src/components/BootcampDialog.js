@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Dialog,
@@ -8,10 +8,17 @@ import {
   DialogTitle,
   Grid,
 } from '@material-ui/core';
+import BootcampForm from './BootcampForm';
 
-export default function BootcampDialog({ key, title, content, open, handleOpen }) {
+export default function BootcampDialog({ userType, enterpriseId, id, title, content, open, handleOpen }) {
 
-  const id = key;
+  const key = id;
+
+  const [openForm, setOpenForm] = useState(false);
+
+  const handleOpenForm = () => {
+    setOpenForm(!openForm);
+  }
 
   return (
     <div>
@@ -34,9 +41,23 @@ export default function BootcampDialog({ key, title, content, open, handleOpen }
           </Grid>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleOpen} variant='contained' color='secondary'>
+          <Button onClick={handleOpen} variant='contained' color='secondary'>
             Back
           </Button>
+          {
+            userType === 0 ?
+              <Button autoFocus onClick={handleOpenForm} variant='contained' color='primary'>
+                Edit
+              </Button>
+              : ''
+          }
+          <BootcampForm
+            id={key}
+            enterpriseId={enterpriseId}
+            add={false}
+            open={openForm}
+            handleOpen={handleOpenForm}
+          />
         </DialogActions>
       </Dialog>
     </div>
