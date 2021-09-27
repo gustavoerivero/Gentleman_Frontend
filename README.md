@@ -79,7 +79,7 @@ _It's good to emphasize that the project was developed with:_
 
 * [React.js](https://es.reactjs.org/) - The web framework used.
 * [React Router](https://reactrouter.com/) - React.js library for navigation between pages.
-* Material UI](https://material-ui.com/) - React.js library for visual component design.
+* [Material UI](https://material-ui.com/) - React.js library for visual component design.
 * [React VFX](https://amagi.dev/react-vfx/) - React.js library for adding VFX effects to images, videos and/or text.
 * [React Top Bar Progress Indicator](https://www.npmjs.com/package/react-topbar-progress-indicator) - React.js library for adding a top bar to indicate page loading.
 * [React Router DOM](https://www.npmjs.com/package/react-router-dom) - React.js library that facilitates redirection between pages.
