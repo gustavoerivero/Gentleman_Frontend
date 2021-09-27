@@ -17,8 +17,31 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: 600,
       padding: 15,
     },
+  
+    leftField: {
+      marginTop: "1em",
+      [theme.breakpoints.up("sm")]: {
+        width: "47%",
+        marginRight: "3%",
+      },
+      [theme.breakpoints.down("md")]: {
+        width: "100%",
+        marginRight: "0%",
+      },
+    },
+    rightField: {
+      marginTop: "1em",
+      [theme.breakpoints.up("sm")]: {
+        width: "47%",
+        marginLeft: "3%",
+      },
+      [theme.breakpoints.down("md")]: {
+        width: "100%",
+        marginLeft: "0%",
+      },
+    },
   }));
-
+  
 const Profile = () => {
     const classes = useStyles();
 
@@ -26,15 +49,15 @@ const Profile = () => {
  <div>
       <form alignItems="center">
         <Paper className={classes.root}>
-          <Grid container spacing={2} justifyContent="right">
+          <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} align="center">
               <Typography variant="h5" component="h2" color="primary">
               <Avatar style={{ height: '100px', width: '100px' }}></Avatar>
               </Typography>
             </Grid>
 
-
-            <TextField style ={{width: '50%'}}
+            <Grid item xs={12}>
+            <TextField 
                 label="User"
                 variant="filled"
                 placeholder="Enter a user"
@@ -42,58 +65,61 @@ const Profile = () => {
                 className={classes.leftField}
             />
 
-            
-            <TextField style ={{width: '50%'}}
+            <TextField 
                 label="Full Name"
                 variant="filled"
                 placeholder="Enter your full name"
                 required
-                className={classes.leftField}
+                className={classes.rightField}
             />
+ 
 
-
-            <TextField style ={{width: '50%'}}
+            <TextField 
                 label="Password"
                 variant="filled"
                 placeholder="Enter a valid password"
                 required
-                className={classes.rightField}
+                className={classes.leftField}
               />
 
 
-            <TextField style ={{width: '50%'}}
+            <TextField 
                 label="Confirm Password"
                 required
                 variant="filled"
                 placeholder="Please confirm your password"
-                className={classes.leftField}
-              />
-
- 
-
-              <TextField style ={{width: '50%'}}
-                label="Email"
-                variant="filled"
-                placeholder="Enter a valid email"
                 required
                 className={classes.rightField}
               />
 
-              <TextField style ={{width: '50%'}}
+ 
+              <TextField 
+                label="Email"
+                variant="filled"
+                placeholder="Enter a valid email"
+                required
+                className={classes.leftField}
+              />
+     
+
+              <TextField 
                 label="Social Network"
                 variant="filled"
                 placeholder="Enter your LinkedIn profile (if you have)"
+                required
                 className={classes.rightField}
               />
 
-              <TextField style ={{width: '50%'}}
+
+              <TextField 
                 label="Repository"
                 variant="filled"
                 placeholder="Enter your Github profile (if you have)"
                 className={classes.leftField}
               />
 
-              <TextField style ={{width: '50%'}}
+
+              <TextField 
                 label="Country"
                 variant="filled"
                 placeholder="Enter the country where you live"
@@ -101,7 +127,7 @@ const Profile = () => {
                 className={classes.rightField}
               />
 
-
+            
               <TextField
                 label="Enter a brief description"
                 variant="filled"
@@ -112,13 +138,13 @@ const Profile = () => {
                 fullWidth
                 className={classes.complete}
               />
-        
-
+            </Grid>
             <Grid item xs={12} align="center">
+              
               <Button variant="contained" color="primary">
                 Edit User
               </Button>
-            </Grid>
+              </Grid>
           </Grid>
         </Paper>
       </form>
