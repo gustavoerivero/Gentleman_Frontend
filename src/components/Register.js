@@ -1,6 +1,9 @@
 import React from "react";
 import { Button, Grid, Paper, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import {
+  useParams
+} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,8 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = () => {
+const Register = () => {
   const classes = useStyles();
+  let { value } = useParams();
 
   return (
     <div>
@@ -42,12 +46,12 @@ const Login = () => {
           <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} align="center">
               <Typography variant="h5" component="h2" color="primary">
-                <b>Enter User Information</b>
+                <b>Enter { value === "user" ? "User" : "Company"}  Information</b>
               </Typography>
             </Grid>
             <Grid item xs={12}>
               <TextField
-                label="Full Name"
+                label={ value === "user" ? "Full Name" : "Name"}
                 variant="filled"
                 placeholder="Enter your full name"
                 required
@@ -63,9 +67,9 @@ const Login = () => {
               />
 
               <TextField
-                label="User"
+                label="Username"
                 variant="filled"
-                placeholder="Enter a user"
+                placeholder="Enter a username"
                 required
                 className={classes.leftField}
               />
@@ -78,7 +82,7 @@ const Login = () => {
               />
 
               <TextField
-                label="Repository"
+              label={ value === "user" ? "Repository" : "Website"}
                 variant="filled"
                 placeholder="Enter your Github profile (if you have)"
                 className={classes.leftField}
@@ -131,4 +135,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
