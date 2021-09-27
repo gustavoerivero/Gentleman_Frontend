@@ -43,7 +43,7 @@ export default function BootCampCard({ userType, enterpriseId, id, title, conten
         <Grid item xs={2} md={1} align='right'>
           <CardActions>
             <Button size='small' variant='text' color='primary' onClick={handleOpen}>
-              {userType === 2 ? "Apply" : "View"}
+              {userType === 1 ? "Apply" : "View"}
             </Button>
             <BootcampDialog 
               id={id}
