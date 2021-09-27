@@ -4,10 +4,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 export default function Loading() {
   return (
-    <div>
-      <Backdrop open={true} >
-        <CircularProgress color='primary' />
-      </Backdrop>
-    </div>
+    <Backdrop open={true} >
+      <CircularProgress color='primary' />
+    </Backdrop>
   );
 }
