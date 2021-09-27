@@ -48,13 +48,13 @@ export default function LoginPage() {
         <CssBaseline />
       </Grid>
       <Grid item xs={12} align='center' className={classes.container}>
-        <Appbar userType={0} title='My bootcamps' />
+        <Appbar userType={2} title='My bootcamps' />
       </Grid>
       {
         state.length > 0 && state.map((el, i) => {
           return(
             <Grid item xs={12} key={i} align='center'>
-              <BootcampCard id={i} title={el.name} content={el._id} userType={0} />
+              <BootcampCard id={i} title={el.name} content={el._id} userType={2} />
             </Grid>
           )
         })

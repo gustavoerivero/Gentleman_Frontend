@@ -45,7 +45,7 @@ export default function BootcampDialog({ userType, enterpriseId, id, title, cont
             Back
           </Button>
           {
-            userType === 0 ?
+            userType === 2 ?
               <Button autoFocus onClick={handleOpenForm} variant='contained' color='primary'>
                 Edit
               </Button>
