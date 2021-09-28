@@ -23,12 +23,12 @@ export default function EnterpriseFeed() {
   const [page, setPage] = useState(1);
 
   //ejemplo de infinite scroll
- /* useEffect(() => {
+  useEffect(() => {
     fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=5`)
       .then(res => res.json())
       .then(json => setState([...state, ...json.data]));
     console.log(page);
-  }, [page]); */
+  }, [page]); 
 
   const scrollToEnd = () => {
     setPage(page + 1);
