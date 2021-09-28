@@ -16,18 +16,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function LoginPage() {
+export default function EnterpriseFeed() {
   let { value } = useParams();
 
   const [state, setState] = useState([]);
   const [page, setPage] = useState(1);
 
-  useEffect(() => {
+  //ejemplo de infinite scroll
+ /* useEffect(() => {
     fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=5`)
       .then(res => res.json())
       .then(json => setState([...state, ...json.data]));
     console.log(page);
-  }, [page]);
+  }, [page]); */
 
   const scrollToEnd = () => {
     setPage(page + 1);
