@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Button, Grid, Paper, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router-dom";
 import { createUser } from "../api/modules";
 import CustomizedSnackbar from "./Snackbar";
+=======
+import React from "react";
+import { Button, Grid, Paper, TextField, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  useParams
+} from "react-router-dom";
+>>>>>>> origin/oswaldoyanez
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,7 +20,11 @@ const useStyles = makeStyles((theme) => ({
     padding: 15,
   },
   complete: {
+<<<<<<< HEAD
     marginTop: "1em",
+=======
+    marginTop: '1em',
+>>>>>>> origin/oswaldoyanez
   },
   leftField: {
     marginTop: "1em",

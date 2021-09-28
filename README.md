@@ -98,4 +98,8 @@ _The authors of this project are:_
 
 
 ---
+<<<<<<< HEAD
 ⌨️ with ❤️ by [Flamethyst Programming] 
+=======
+⌨️ with ❤️ by [Flamethyst Programming] 
+>>>>>>> origin/oswaldoyanez

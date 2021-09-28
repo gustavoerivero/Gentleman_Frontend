@@ -13,6 +13,7 @@ import {
   MenuItem,
   ListItemIcon,
   ListItemText,
+  ListItem,
   Toolbar,
   Typography
 } from '@material-ui/core';
@@ -123,7 +124,11 @@ export default function Appbar({ userType, title, buttonText, handleClick }) {
               </Typography>
             </Grid>
             <Grid item xs={5} md={3} align='right'>
+<<<<<<< HEAD
               {userType === 2 ? 
+=======
+              {userType === 0 ? 
+>>>>>>> origin/oswaldoyanez
                 <Button 
                   size='small' 
                   color='primary' 
@@ -165,13 +170,19 @@ export default function Appbar({ userType, title, buttonText, handleClick }) {
             <ListItemIcon>
               <AccountBoxIcon color='primary' />
             </ListItemIcon>
-            <ListItemText secondary='My profile' />
+
+            <ListItem button component={Link} to="/profile">
+                <ListItemText secondary="My profile" />
+            </ListItem>
+            
           </MenuItem>
           <MenuItem component={Link} to='/'>
             <ListItemIcon>
               <ExitToAppIcon color='primary' />
             </ListItemIcon>
+            <ListItem>
             <ListItemText secondary='Log out' />
+            </ListItem>
           </MenuItem>
         </MenuList>
         <Divider />
