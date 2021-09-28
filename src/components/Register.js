@@ -183,6 +183,7 @@ const Register = () => {
                 variant="filled"
                 placeholder="Enter a valid password"
                 required
+                type='password'
                 value={user.password}
                 onChange={handleChange("password")}
                 className={classes.leftField}
@@ -191,6 +192,7 @@ const Register = () => {
               <TextField
                 label="Confirm Password"
                 required
+                type='password'
                 variant="filled"
                 placeholder="Please confirm your password"
                 value={passwordCheck}
