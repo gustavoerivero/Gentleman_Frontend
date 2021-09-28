@@ -5,6 +5,7 @@ import Appbar from '../components/AppBar';
 import BootcampCard from '../components/BootcampCard';
 import '@fontsource/roboto';
 import '../assets/css/main.css';
+import { useParams } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function LoginPage() {
+  let { value } = useParams();
 
   const [state, setState] = useState([]);
   const [page, setPage] = useState(1);
@@ -54,7 +56,7 @@ export default function LoginPage() {
         state.length > 0 && state.map((el, i) => {
           return(
             <Grid item xs={12} key={i} align='center'>
-              <BootcampCard id={i} title={el.name} content={el._id} userType={1} />
+              <BootcampCard id={i} title={el.name} content={el._id} userType={value === 'user' ? 1 : 2} />
             </Grid>
           )
         })

@@ -15,9 +15,7 @@ import { login } from '../api/modules'
 import { Link } from "react-router-dom";
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import {
-  useParams
-} from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 const Login = () => {
 
   const classes = useStyles()
-  let { value } = useParams();
   
   const [showPassword, setShowPassword] = useState(false)
   const handleClickShowPassword = () => setShowPassword(!showPassword)
