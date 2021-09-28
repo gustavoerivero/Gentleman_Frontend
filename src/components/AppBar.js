@@ -124,11 +124,7 @@ export default function Appbar({ userType, title, buttonText, handleClick }) {
               </Typography>
             </Grid>
             <Grid item xs={5} md={3} align='right'>
-<<<<<<< HEAD
               {userType === 2 ? 
-=======
-              {userType === 0 ? 
->>>>>>> origin/oswaldoyanez
                 <Button 
                   size='small' 
                   color='primary' 
