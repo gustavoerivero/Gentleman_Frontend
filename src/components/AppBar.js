@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
-import {
-  makeStyles,
-  useTheme,
-} from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   CssBaseline,
   Button,
@@ -16,10 +13,12 @@ import {
   MenuItem,
   ListItemIcon,
   ListItemText,
+  ListItem,
   Toolbar,
   Typography
 } from '@material-ui/core';
-
+import BootcampForm from './BootcampForm';
+import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -77,11 +76,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Appbar({ title, buttonText, handleClick }) {
+export default function Appbar({ userType, title, buttonText, handleClick }) {
 
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [openBootcampForm, setOpenBootcampForm]  = useState(false);
+
+  const handleOpenBootcampForm = () => {
+    setOpenBootcampForm(!openBootcampForm);
+  }
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -120,9 +124,24 @@ export default function Appbar({ title, buttonText, handleClick }) {
               </Typography>
             </Grid>
             <Grid item xs={5} md={3} align='right'>
-              <Button size='small' color='primary' variant='contained' className={classes.button}>
-                Agregar bootcamp
-              </Button>
+              {userType === 0 ? 
+                <Button 
+                  size='small' 
+                  color='primary' 
+                  variant='contained' 
+                  className={classes.button}
+                  onClick={handleOpenBootcampForm}
+                >
+                  Add bootcamp
+                </Button>
+                : ''
+              }
+              <BootcampForm 
+                enterpriseId={1}
+                open={openBootcampForm}
+                handleOpen={handleOpenBootcampForm}
+                add={true}
+              />
             </Grid>
           </Grid>
         </Toolbar>
@@ -147,13 +166,19 @@ export default function Appbar({ title, buttonText, handleClick }) {
             <ListItemIcon>
               <AccountBoxIcon color='primary' />
             </ListItemIcon>
-            <ListItemText secondary='Mi perfil' />
+
+            <ListItem button component={Link} to="/profile">
+                <ListItemText secondary="My profile" />
+            </ListItem>
+            
           </MenuItem>
-          <MenuItem>
+          <MenuItem component={Link} to='/'>
             <ListItemIcon>
               <ExitToAppIcon color='primary' />
             </ListItemIcon>
-            <ListItemText secondary='Cerrar sesión' />
+            <ListItem>
+            <ListItemText secondary='Log out' />
+            </ListItem>
           </MenuItem>
         </MenuList>
         <Divider />

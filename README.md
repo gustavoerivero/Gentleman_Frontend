@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Hackathon Gentleman Programming 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<table>
+    <tr>
+        <!-- Do not translate this table -->
+        <td><a href="./README.md"> English </a></td>
+        <td><a href="./README.ES.md"> Spanish </a></td>
+    </tr>
+</table>
 
-## Available Scripts
+_This project represents the challenge proposed by the Hackathon Gentleman Programming 2021, in which a system based on JavaScript and libraries derived from the same language will be created. A project related to bootcamps, where both users and companies can log in / sign up, companies can add bootcamps and users can sign up for them._
 
-In the project directory, you can run:
+### Pre-requisites 📋
 
-### `yarn start`
+* Latest stable version of [Node.js](https://nodejs.org/en/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Or, failing that
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Latest stable version of [Yarn](https://yarnpkg.com/)
 
-### `yarn test`
+* For the project [Visual Studio Code](https://code.visualstudio.com/) was used as text editor for the frontend, but [Visual Studio Code](https://code.visualstudio.com/) can be used for the frontend. 
+frontend development, but another text editor can be used.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation 🔧
 
-### `yarn build`
+_To begin, we proceed with the download of the repository.To do this, open the console, go to the folder in which you want to save the project and execute the following command:_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/gustavoerivero/Gentleman_Frontend.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Then go to the cloned folder in the "Gentleman_Frontend" repository._
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_For a Windows Operating System, with the command:__
 
-### `yarn eject`
+```
+cd Gentleman_Frontend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then, the frontend dependencies are installed. It should be noted that there are different ways to do this._
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_With npm:_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+_If it doesn't work, try with:_
 
-## Learn More
+```
+npm i -f
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_If using yarn:_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn upgrade
+```
 
-### Code Splitting
+_Once the installation of the dependencies is successful, the frontend is ready to deploy._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment 📦
 
-### Analyzing the Bundle Size
+* _To deploy the frontend locally (localhost:3000), we proceed by executing one of the following commands:_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_With npm:_
 
-### Making a Progressive Web App
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+_With yarn:_
+```
+yarn start
+```
 
-### Advanced Configuration
+## Built with 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+_It's good to emphasize that the project was developed with:_
 
-### Deployment
+* [React.js](https://es.reactjs.org/) - The web framework used.
+* [React Router](https://reactrouter.com/) - React.js library for navigation between pages.
+* [Material UI](https://material-ui.com/) - React.js library for visual component design.
+* [React VFX](https://amagi.dev/react-vfx/) - React.js library for adding VFX effects to images, videos and/or text.
+* [React Top Bar Progress Indicator](https://www.npmjs.com/package/react-topbar-progress-indicator) - React.js library for adding a top bar to indicate page loading.
+* [React Router DOM](https://www.npmjs.com/package/react-router-dom) - React.js library that facilitates redirection between pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Authors ✒️
 
-### `yarn build` fails to minify
+_The authors of this project are:_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Gustavo Rivero** - [gustavoerivero](https://github.com/gustavoerivero)
+* **Dany Karam**  - [Ryuuji14](https://github.com/Ryuuji14)
+* **Oswaldo Yanez**  - [WolvesDevelopers](https://github.com/WolvesDevelopers)
+* **Wilder Pérez**  - [Sr-Wild](https://github.com/Sr-Wild)
+* **Simón Velazquez**  - [nohearth](https://github.com/nohearth)
+
+
+
+
+---
+⌨️ with ❤️ by [Flamethyst Programming] 
